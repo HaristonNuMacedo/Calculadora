@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.MainPage"
+             BackgroundColor="#242524"
+             Title="Calculadora">
+
+    <Grid RowSpacing="10" ColumnSpacing="10" Margin="10,10,10,10">
+
+        <!--As duas label1s de cima-->
+        <Label BackgroundColor="Transparent" x:Name="lb02" Grid.Row="0" 
+               Grid.Column="0" Grid.ColumnSpan="4" Padding="10,30,15,0" Margin="0,10,10,0" FontSize="25" Text="" HorizontalOptions="End" TextColor="#2abb96"/>
+
+        <Label BackgroundColor="Transparent" x:Name="lb01" Grid.Row="1" 
+               Grid.Column="0" Grid.ColumnSpan="4" Padding="10,-5,5,0" Margin="0,0,10,20" FontSize="45" Text="0" HorizontalOptions="End" TextColor="#2abb96"/>
+
+        <!--A Primeira Linha de Numeros <==, C, / e X ou *-->
+        <ImageButton Source="delete.png"
+                Grid.Row="2" Grid.Column="0" BackgroundColor="#2b2c31"
+                CornerRadius="10" Clicked="Apagar" />
+        
+        <Button Text="C" FontSize="25"
+                Grid.Row="2" Grid.Column="1" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" Clicked="Limpar"/>
+        
+        <Button Text="/" FontSize="20"
+                Grid.Row="2" Grid.Column="2" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" Clicked="btnDiv"/>
+
+        <Button Text="X" FontSize="20"
+                Grid.Row="2" Grid.Column="3" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" Clicked="btnMulti"/>
+
+        <!--A Primeira Linha de Numeros 7, 8, 9 e +-->
+        <Button Text="7" FontSize="20"
+                Grid.Row="3" Grid.Column="0" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" Clicked="btnNumber7"/>
+        <Button Text="8" FontSize="20"
+                Grid.Row="3" Grid.Column="1" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" Clicked="btnNumber8"/>
+
+        <Button Text="9" FontSize="20"
+                Grid.Row="3" Grid.Column="2" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" Clicked="btnNumber9"/>
+
+        <Button Text="+" FontSize="20"
+                Grid.Row="4" Grid.Column="3" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" Grid.RowSpan="2" x:Name="lbOperacao" Clicked="btnSoma"/>
+
+        <!--A Segunda Linha de Numeros 4, 5, 6 e -(Menos) -->
+        <Button Text="4" FontSize="20"
+                Grid.Row="4" Grid.Column="0" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" Clicked="btnNumber4"/>
+
+        <Button Text="5" FontSize="20"
+                Grid.Row="4" Grid.Column="1" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" Clicked="btnNumber5"/>
+
+        <Button Text="6" FontSize="20"
+                Grid.Row="4" Grid.Column="2" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" Clicked="btnNumber6"/>
+
+        <Button Text="-" FontSize="20"
+                Grid.Row="3" Grid.Column="3" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" Clicked="btnSubtracao"/>
+
+        <!--A Terceira Linha de Numeros 1, 2, 3 -->
+        <Button Text="1" FontSize="20"
+                Grid.Row="5" Grid.Column="0" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" x:Name="number1" Clicked="btnNumber1"/>
+
+        <Button Text="2" FontSize="20"
+                Grid.Row="5" Grid.Column="1" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" Clicked="btnNumber2"/>
+
+        <Button Text="3" FontSize="20"
+                Grid.Row="5" Grid.Column="2" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" Clicked="btnNumber3"/>
+
+        <!--A Ultima Linha de Numeros 0, ., e = -->
+        <Button Text="0" FontSize="20"
+                Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="1" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" x:Name="number0" Clicked="btnNumber"/>
+        
+        <Button Text="." FontSize="30"
+                Grid.Row="6" Grid.Column="1"  Grid.ColumnSpan="1" TextColor="White" BackgroundColor="#2b2c31"
+                CornerRadius="10" FontAttributes="Bold" x:Name="ponto" Clicked="btnPonto"/>
+        
+        <Button Text="=" FontSize="20"
+                Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" TextColor="White" BackgroundColor="#2abb96"
+                CornerRadius="10" FontAttributes="Bold" x:Name="resultado" Clicked="btnResultado"/>
+
+        <!--Linha de Configurações-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+    </Grid>
+
+</ContentPage>
